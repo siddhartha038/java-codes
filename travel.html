@@ -1,0 +1,58 @@
+<html>
+
+<head>
+    <style>
+        .card {
+            width: 300px;
+            height: 400px;
+            border: 1px solid gray;
+            margin: 20px;
+            float: left;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Discover the World</h1>
+    <div id="places">
+    </div>
+</body>
+<script>
+    const places = [
+        {
+            name: "Paris",
+            image: "https://picsum.photos/300/200?image=1036",
+            description: "Paris, the city of love and lights, is famous for its iconic landmarks such as the Eiffel Tower and the Louvre Museum."
+        },
+        {
+            name: "Rome",
+            image: "https://picsum.photos/300/200?image=903",
+            description: "Rome, the Eternal City, is home to ancient ruins such as the Colosseum and the Roman Forum, as well as beautiful Baroque churches and fountains."
+        },
+        {
+            name: "London",
+            image: "https://picsum.photos/300/200?image=1076",
+            description: "London, the capital of England, is a vibrant city filled with historical landmarks such as Buckingham Palace and the Tower of London, as well as bustling shopping districts and vibrant nightlife."
+        }
+    ];
+
+    const displayPlaces = () => {
+        const placeContainer = document.querySelector("#places");
+        let placeHTML = "";
+        places.forEach(place => {
+            placeHTML += `
+          <div class="card">
+            <h2>${place.name}</h2>
+            <img src="${place.image}" alt="${place.name}">
+            <p>${place.description}</p>
+          </div>
+        `;
+        });
+        placeContainer.innerHTML = placeHTML;
+    };
+
+    displayPlaces();
+</script>
+
+</html>
