@@ -10,7 +10,7 @@ public class expression {
         int b = sc.nextInt();
         System.out.println("Enter the value of C");
         int c = sc.nextInt();
-        System.out.println("The required answer is:");
+        System.out.println("The result of the expression is:");
         int d = a + b - c;
         System.out.println(d);
     }
