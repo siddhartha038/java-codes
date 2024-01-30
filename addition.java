@@ -10,3 +10,4 @@ public class addition {
         System.out.println(sum);
     }
 }
+// Program for addition of 2 no.
